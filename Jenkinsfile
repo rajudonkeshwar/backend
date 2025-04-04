@@ -35,6 +35,20 @@ pipeline {
                 sh 'npm install'
             }
         }
+
+        stage('Docker build') {
+            steps {
+                sh  """
+                docker build -t rajudonkeshwar/backend:${appVersion} .
+                docker images
+                """
+
+            }
+        }
+
+
+
+
         /* stage('SonarQube analysis') {
             environment {
                 SCANNER_HOME = tool 'sonar-6.0' //scanner config
