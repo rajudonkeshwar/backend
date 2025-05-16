@@ -1,9 +1,9 @@
 // install (pipe line utility steps) plugin to read the version
 // INSTALL PIPELINE STAGE VIEW PLUGIN
 pipeline {
-    agent {
-        label 'AGENT-1'
-    }
+    // agent {
+    //     label 'AGENT-1'
+    // }
     options{
         // timeout(time: 30, unit: 'MINUTES')
         disableConcurrentBuilds()
